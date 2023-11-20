@@ -1,0 +1,232 @@
+2023-11-21T00:02:53.168+05:30  INFO 32780 --- [RMI TCP Connection(31)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-11-21T00:02:53.254+05:30  INFO 32780 --- [RMI TCP Connection(31)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-21T00:02:53.263+05:30  INFO 32780 --- [RMI TCP Connection(31)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-11-21T00:02:53.271+05:30  WARN 32780 --- [RMI TCP Connection(31)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.8.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.8.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.8.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.8.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.8.1/java.lang.Thread.run(Thread.java:833)
+2023-11-21T00:02:53.345+05:30  INFO 32780 --- [RMI TCP Connection(31)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T00:02:53.352+05:30  INFO 32780 --- [RMI TCP Connection(31)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-21T00:02:53.706+05:30  INFO 32780 --- [RMI TCP Connection(31)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-21T00:23:14.980+05:30  INFO 15304 --- [main] com.hexaware.lms.CaseStudyApplication    : Starting CaseStudyApplication using Java 17.0.8.1 with PID 15304 (C:\Users\KIRAN\Downloads\case-study\target\classes started by KIRAN in C:\Users\KIRAN\Downloads\case-study)
+2023-11-21T00:23:15.025+05:30  INFO 15304 --- [main] com.hexaware.lms.CaseStudyApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-11-21T00:23:19.884+05:30  INFO 15304 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21T00:23:20.470+05:30  INFO 15304 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 547 ms. Found 7 JPA repository interfaces.
+2023-11-21T00:23:23.094+05:30  INFO 15304 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8181 (http)
+2023-11-21T00:23:23.139+05:30  INFO 15304 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21T00:23:23.140+05:30  INFO 15304 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-11-21T00:23:23.656+05:30  INFO 15304 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-21T00:23:23.658+05:30  INFO 15304 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8313 ms
+2023-11-21T00:23:24.425+05:30  INFO 15304 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-21T00:23:24.806+05:30  INFO 15304 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-11-21T00:23:25.629+05:30  WARN 15304 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-11-21T00:23:26.214+05:30  INFO 15304 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-21T00:23:27.559+05:30  INFO 15304 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@445058e8
+2023-11-21T00:23:27.566+05:30  INFO 15304 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-21T00:23:27.860+05:30  INFO 15304 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-11-21T00:23:33.020+05:30  INFO 15304 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-21T00:23:33.052+05:30  INFO 15304 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T00:23:38.064+05:30  WARN 15304 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-21T00:23:41.307+05:30  INFO 15304 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6527f68a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@741687d4, org.springframework.security.web.context.SecurityContextHolderFilter@18edbed9, org.springframework.security.web.header.HeaderWriterFilter@70313b0b, org.springframework.security.web.authentication.logout.LogoutFilter@360432d3, com.hexaware.lms.filter.JwtAuthFilter@51b2b3e6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@75f316df, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2d4aadc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@77b0ff24, org.springframework.security.web.session.SessionManagementFilter@76e4df53, org.springframework.security.web.access.ExceptionTranslationFilter@7fecc26f, org.springframework.security.web.access.intercept.AuthorizationFilter@5e89e527]
+2023-11-21T00:23:42.453+05:30  INFO 15304 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8181 (http) with context path ''
+2023-11-21T00:23:42.473+05:30  INFO 15304 --- [main] com.hexaware.lms.CaseStudyApplication    : Started CaseStudyApplication in 28.997 seconds (process running for 31.103)
+2023-11-21T01:37:11.120+05:30  INFO 12860 --- [main] com.hexaware.lms.CaseStudyApplication    : Starting CaseStudyApplication using Java 17.0.8.1 with PID 12860 (C:\Users\KIRAN\Downloads\case-study\target\classes started by KIRAN in C:\Users\KIRAN\Downloads\case-study)
+2023-11-21T01:37:11.147+05:30  INFO 12860 --- [main] com.hexaware.lms.CaseStudyApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-11-21T01:37:15.078+05:30  INFO 12860 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21T01:37:15.405+05:30  INFO 12860 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 306 ms. Found 7 JPA repository interfaces.
+2023-11-21T01:37:17.854+05:30  INFO 12860 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8181 (http)
+2023-11-21T01:37:17.898+05:30  INFO 12860 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21T01:37:17.905+05:30  INFO 12860 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-11-21T01:37:18.457+05:30  INFO 12860 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-21T01:37:18.459+05:30  INFO 12860 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7110 ms
+2023-11-21T01:37:19.186+05:30  INFO 12860 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-21T01:37:19.538+05:30  INFO 12860 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-11-21T01:37:20.548+05:30  WARN 12860 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-11-21T01:37:21.190+05:30  INFO 12860 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-21T01:37:22.684+05:30  INFO 12860 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@655909e2
+2023-11-21T01:37:22.693+05:30  INFO 12860 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-21T01:37:23.415+05:30  INFO 12860 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-11-21T01:37:28.648+05:30  INFO 12860 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-21T01:37:28.681+05:30  INFO 12860 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T01:37:31.619+05:30  WARN 12860 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-21T01:37:36.594+05:30  INFO 12860 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5da16ed6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@444720b7, org.springframework.security.web.context.SecurityContextHolderFilter@6020cd42, org.springframework.security.web.header.HeaderWriterFilter@3431cb1f, org.springframework.security.web.authentication.logout.LogoutFilter@421c057a, com.hexaware.lms.filter.JwtAuthFilter@6484364f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@326d39fd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@403f6c04, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@529fda9f, org.springframework.security.web.session.SessionManagementFilter@5b9c74a, org.springframework.security.web.access.ExceptionTranslationFilter@6fe55fcf, org.springframework.security.web.access.intercept.AuthorizationFilter@7fecc26f]
+2023-11-21T01:37:38.430+05:30  WARN 12860 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2023-11-21T01:37:38.448+05:30  INFO 12860 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T01:37:38.490+05:30  INFO 12860 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-21T01:37:38.524+05:30  INFO 12860 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-21T01:37:38.528+05:30  INFO 12860 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-21T01:37:38.596+05:30  INFO 12860 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-11-21T01:37:38.728+05:30 ERROR 12860 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8181 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8181 or configure this application to listen on another port.
+
+2023-11-21T01:38:46.602+05:30  INFO 15304 --- [RMI TCP Connection(97)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-11-21T01:38:46.915+05:30  INFO 15304 --- [RMI TCP Connection(97)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-21T01:38:46.981+05:30  WARN 15304 --- [RMI TCP Connection(97)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.8.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.8.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.8.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.8.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.8.1/java.lang.Thread.run(Thread.java:833)
+2023-11-21T01:38:47.079+05:30  INFO 15304 --- [RMI TCP Connection(97)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T01:38:47.112+05:30  INFO 15304 --- [RMI TCP Connection(97)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-21T01:38:47.183+05:30  INFO 15304 --- [RMI TCP Connection(97)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-21T01:38:58.847+05:30  INFO 19956 --- [main] com.hexaware.lms.CaseStudyApplication    : Starting CaseStudyApplication using Java 17.0.8.1 with PID 19956 (C:\Users\KIRAN\Downloads\case-study\target\classes started by KIRAN in C:\Users\KIRAN\Downloads\case-study)
+2023-11-21T01:38:58.865+05:30  INFO 19956 --- [main] com.hexaware.lms.CaseStudyApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-11-21T01:39:02.893+05:30  INFO 19956 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21T01:39:03.435+05:30  INFO 19956 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 519 ms. Found 7 JPA repository interfaces.
+2023-11-21T01:39:06.967+05:30  INFO 19956 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8181 (http)
+2023-11-21T01:39:07.047+05:30  INFO 19956 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21T01:39:07.049+05:30  INFO 19956 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-11-21T01:39:07.828+05:30  INFO 19956 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-21T01:39:07.832+05:30  INFO 19956 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8784 ms
+2023-11-21T01:39:08.888+05:30  INFO 19956 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-21T01:39:09.349+05:30  INFO 19956 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-11-21T01:39:10.458+05:30  WARN 19956 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-11-21T01:39:11.450+05:30  INFO 19956 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-21T01:39:13.160+05:30  INFO 19956 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b3085a3
+2023-11-21T01:39:13.166+05:30  INFO 19956 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-21T01:39:13.577+05:30  INFO 19956 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-11-21T01:39:20.676+05:30  INFO 19956 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-21T01:39:20.714+05:30  INFO 19956 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T01:39:28.890+05:30  WARN 19956 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-21T01:39:33.856+05:30  INFO 19956 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@28df2da8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@30b5f974, org.springframework.security.web.context.SecurityContextHolderFilter@157ff8f8, org.springframework.security.web.header.HeaderWriterFilter@6f915016, org.springframework.security.web.authentication.logout.LogoutFilter@2da3d7d3, com.hexaware.lms.filter.JwtAuthFilter@5b4ce00, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@67263db7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4a2bc71f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@37227aa7, org.springframework.security.web.session.SessionManagementFilter@6b26839d, org.springframework.security.web.access.ExceptionTranslationFilter@7d1b96b9, org.springframework.security.web.access.intercept.AuthorizationFilter@70ed03e4]
+2023-11-21T01:39:36.450+05:30  INFO 19956 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8181 (http) with context path ''
+2023-11-21T01:39:36.492+05:30  INFO 19956 --- [main] com.hexaware.lms.CaseStudyApplication    : Started CaseStudyApplication in 38.987 seconds (process running for 42.383)
+2023-11-21T01:39:47.131+05:30  INFO 19956 --- [http-nio-8181-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-21T01:39:47.133+05:30  INFO 19956 --- [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-21T01:39:47.140+05:30  INFO 19956 --- [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-11-21T01:39:49.428+05:30  WARN 19956 --- [http-nio-8181-exec-9] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.lms.restcontroller.BookRestController
+2023-11-21T01:39:50.255+05:30  WARN 19956 --- [http-nio-8181-exec-9] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.lms.restcontroller.AdminRestController
+2023-11-21T01:39:50.299+05:30  WARN 19956 --- [http-nio-8181-exec-9] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.lms.restcontroller.LoginRestController
+2023-11-21T01:39:50.321+05:30  WARN 19956 --- [http-nio-8181-exec-9] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.lms.restcontroller.LoanmanagementRestController
+2023-11-21T01:39:50.430+05:30  WARN 19956 --- [http-nio-8181-exec-9] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.lms.restcontroller.BorrowingRestController
+2023-11-21T01:39:50.646+05:30  WARN 19956 --- [http-nio-8181-exec-9] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.lms.restcontroller.ReservationRestController
+2023-11-21T01:39:50.771+05:30  WARN 19956 --- [http-nio-8181-exec-9] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.lms.restcontroller.ReportsRestController
+2023-11-21T01:39:50.782+05:30  WARN 19956 --- [http-nio-8181-exec-9] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.lms.restcontroller.MemberRestController
+2023-11-21T01:39:51.520+05:30  INFO 19956 --- [http-nio-8181-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 2890 ms
+2023-11-21T01:53:09.678+05:30  INFO 19956 --- [RMI TCP Connection(26)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-11-21T01:53:09.826+05:30  INFO 19956 --- [RMI TCP Connection(26)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-21T01:53:09.830+05:30  INFO 19956 --- [RMI TCP Connection(26)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-11-21T01:53:09.840+05:30  WARN 19956 --- [RMI TCP Connection(26)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.8.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.8.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.8.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.8.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.8.1/java.lang.Thread.run(Thread.java:833)
+2023-11-21T01:53:09.866+05:30  INFO 19956 --- [RMI TCP Connection(26)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T01:53:09.914+05:30  INFO 19956 --- [RMI TCP Connection(26)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-21T01:53:09.981+05:30  INFO 19956 --- [RMI TCP Connection(26)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-21T01:53:19.443+05:30  INFO 36328 --- [main] com.hexaware.lms.CaseStudyApplication    : Starting CaseStudyApplication using Java 17.0.8.1 with PID 36328 (C:\Users\KIRAN\Downloads\case-study\target\classes started by KIRAN in C:\Users\KIRAN\Downloads\case-study)
+2023-11-21T01:53:19.452+05:30  INFO 36328 --- [main] com.hexaware.lms.CaseStudyApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-11-21T01:53:23.050+05:30  INFO 36328 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21T01:53:23.497+05:30  INFO 36328 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 413 ms. Found 7 JPA repository interfaces.
+2023-11-21T01:53:26.557+05:30  INFO 36328 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8181 (http)
+2023-11-21T01:53:26.604+05:30  INFO 36328 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21T01:53:26.605+05:30  INFO 36328 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-11-21T01:53:26.967+05:30  INFO 36328 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-21T01:53:26.968+05:30  INFO 36328 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7297 ms
+2023-11-21T01:53:27.704+05:30  INFO 36328 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-21T01:53:28.041+05:30  INFO 36328 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-11-21T01:53:29.631+05:30  WARN 36328 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-11-21T01:53:30.241+05:30  INFO 36328 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-21T01:53:31.612+05:30  INFO 36328 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@459bf87c
+2023-11-21T01:53:31.617+05:30  INFO 36328 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-21T01:53:31.941+05:30  INFO 36328 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-11-21T01:53:35.457+05:30  INFO 36328 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-21T01:53:35.477+05:30  INFO 36328 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T01:53:37.736+05:30  WARN 36328 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-21T01:53:40.837+05:30  INFO 36328 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@34e1c23d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@240fa4ad, org.springframework.security.web.context.SecurityContextHolderFilter@232899d1, org.springframework.security.web.header.HeaderWriterFilter@6557dcea, org.springframework.security.web.authentication.logout.LogoutFilter@741687d4, com.hexaware.lms.filter.JwtAuthFilter@30b29f55, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@14060410, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@58397dd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4fb3c670, org.springframework.security.web.session.SessionManagementFilter@4bc75792, org.springframework.security.web.access.ExceptionTranslationFilter@72ea5674, org.springframework.security.web.access.intercept.AuthorizationFilter@408a0e92]
+2023-11-21T01:53:42.151+05:30  INFO 36328 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8181 (http) with context path ''
+2023-11-21T01:53:42.188+05:30  INFO 36328 --- [main] com.hexaware.lms.CaseStudyApplication    : Started CaseStudyApplication in 24.688 seconds (process running for 27.811)
+2023-11-21T01:53:54.207+05:30  INFO 36328 --- [http-nio-8181-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-21T01:53:54.209+05:30  INFO 36328 --- [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-21T01:53:54.218+05:30  INFO 36328 --- [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2023-11-21T01:53:55.871+05:30  WARN 36328 --- [http-nio-8181-exec-9] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.lms.restcontroller.BookRestController
+2023-11-21T01:53:56.370+05:30  WARN 36328 --- [http-nio-8181-exec-9] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.lms.restcontroller.AdminRestController
+2023-11-21T01:53:56.402+05:30  WARN 36328 --- [http-nio-8181-exec-9] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.lms.restcontroller.LoginRestController
+2023-11-21T01:53:56.422+05:30  WARN 36328 --- [http-nio-8181-exec-9] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.lms.restcontroller.LoanmanagementRestController
+2023-11-21T01:53:56.557+05:30  WARN 36328 --- [http-nio-8181-exec-9] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.lms.restcontroller.BorrowingRestController
+2023-11-21T01:53:56.853+05:30  WARN 36328 --- [http-nio-8181-exec-9] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.lms.restcontroller.ReservationRestController
+2023-11-21T01:53:56.967+05:30  WARN 36328 --- [http-nio-8181-exec-9] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.lms.restcontroller.ReportsRestController
+2023-11-21T01:53:56.976+05:30  WARN 36328 --- [http-nio-8181-exec-9] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.lms.restcontroller.MemberRestController
+2023-11-21T01:53:57.448+05:30  INFO 36328 --- [http-nio-8181-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 2087 ms
+2023-11-21T01:59:09.868+05:30  INFO 36328 --- [RMI TCP Connection(15)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-11-21T01:59:10.004+05:30  INFO 36328 --- [RMI TCP Connection(15)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-11-21T01:59:10.007+05:30  INFO 36328 --- [RMI TCP Connection(15)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-11-21T01:59:10.012+05:30  WARN 36328 --- [RMI TCP Connection(15)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.8.1/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.8.1/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.8.1/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.8.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.8.1/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.8.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.8.1/java.lang.Thread.run(Thread.java:833)
+2023-11-21T01:59:10.031+05:30  INFO 36328 --- [RMI TCP Connection(15)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T01:59:10.036+05:30  INFO 36328 --- [RMI TCP Connection(15)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-21T01:59:10.080+05:30  INFO 36328 --- [RMI TCP Connection(15)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-21T01:59:23.208+05:30  INFO 10680 --- [main] com.hexaware.lms.CaseStudyApplication    : Starting CaseStudyApplication using Java 17.0.8.1 with PID 10680 (C:\Users\KIRAN\Downloads\case-study\target\classes started by KIRAN in C:\Users\KIRAN\Downloads\case-study)
+2023-11-21T01:59:23.217+05:30  INFO 10680 --- [main] com.hexaware.lms.CaseStudyApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-11-21T01:59:26.199+05:30  INFO 10680 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21T01:59:26.651+05:30  INFO 10680 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 411 ms. Found 7 JPA repository interfaces.
+2023-11-21T01:59:29.352+05:30  INFO 10680 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8181 (http)
+2023-11-21T01:59:29.388+05:30  INFO 10680 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21T01:59:29.389+05:30  INFO 10680 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-11-21T01:59:29.856+05:30  INFO 10680 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-21T01:59:29.858+05:30  INFO 10680 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6509 ms
+2023-11-21T01:59:30.606+05:30  INFO 10680 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-21T01:59:30.935+05:30  INFO 10680 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-11-21T01:59:31.843+05:30  WARN 10680 --- [main] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-11-21T01:59:32.507+05:30  INFO 10680 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-21T01:59:33.776+05:30  INFO 10680 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1171ba7e
+2023-11-21T01:59:33.781+05:30  INFO 10680 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-21T01:59:34.027+05:30  INFO 10680 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-11-21T01:59:37.375+05:30  INFO 10680 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-21T01:59:37.399+05:30  INFO 10680 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T01:59:39.390+05:30  WARN 10680 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-21T01:59:42.395+05:30  INFO 10680 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1deca369, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2d0ce8a1, org.springframework.security.web.context.SecurityContextHolderFilter@7b897456, org.springframework.security.web.header.HeaderWriterFilter@29becf8b, org.springframework.security.web.authentication.logout.LogoutFilter@14060410, com.hexaware.lms.filter.JwtAuthFilter@7e1ce99c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7fecc26f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@402adc9c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2735a7dc, org.springframework.security.web.session.SessionManagementFilter@2943e61c, org.springframework.security.web.access.ExceptionTranslationFilter@7d453075, org.springframework.security.web.access.intercept.AuthorizationFilter@2f53e07d]
+2023-11-21T01:59:43.705+05:30  INFO 10680 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8181 (http) with context path ''
+2023-11-21T01:59:43.743+05:30  INFO 10680 --- [main] com.hexaware.lms.CaseStudyApplication    : Started CaseStudyApplication in 22.662 seconds (process running for 29.184)
+2023-11-21T01:59:59.526+05:30  INFO 10680 --- [http-nio-8181-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-21T01:59:59.528+05:30  INFO 10680 --- [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-21T01:59:59.536+05:30  INFO 10680 --- [http-nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2023-11-21T02:00:01.523+05:30  WARN 10680 --- [http-nio-8181-exec-10] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.lms.restcontroller.BookRestController
+2023-11-21T02:00:01.937+05:30  WARN 10680 --- [http-nio-8181-exec-10] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.lms.restcontroller.AdminRestController
+2023-11-21T02:00:02.039+05:30  WARN 10680 --- [http-nio-8181-exec-10] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.lms.restcontroller.LoginRestController
+2023-11-21T02:00:02.096+05:30  WARN 10680 --- [http-nio-8181-exec-10] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.lms.restcontroller.LoanmanagementRestController
+2023-11-21T02:00:02.319+05:30  WARN 10680 --- [http-nio-8181-exec-10] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.lms.restcontroller.BorrowingRestController
+2023-11-21T02:00:02.590+05:30  WARN 10680 --- [http-nio-8181-exec-10] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.lms.restcontroller.ReservationRestController
+2023-11-21T02:00:02.676+05:30  WARN 10680 --- [http-nio-8181-exec-10] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.lms.restcontroller.ReportsRestController
+2023-11-21T02:00:02.701+05:30  WARN 10680 --- [http-nio-8181-exec-10] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hexaware.lms.restcontroller.MemberRestController
+2023-11-21T02:00:03.115+05:30  INFO 10680 --- [http-nio-8181-exec-10] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 2211 ms
+2023-11-21T02:00:21.373+05:30  INFO 10680 --- [http-nio-8181-exec-9] c.hexaware.lms.service.MemberServiceImp  : Added Member Data Into Tablecom.hexaware.lms.dto.MemberDTO@76f25db4
+2023-11-21T02:04:40.663+05:30  INFO 10680 --- [http-nio-8181-exec-8] c.h.l.r.AdminRestController              : Received request to add admin: Sharma
+2023-11-21T02:04:41.224+05:30  INFO 10680 --- [http-nio-8181-exec-8] c.hexaware.lms.service.AdminServiceImp   : Admin Service Implementation -added Admin data into database successfully 
