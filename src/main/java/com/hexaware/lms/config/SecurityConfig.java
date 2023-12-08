@@ -1,5 +1,4 @@
 package com.hexaware.lms.config;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,7 +15,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-
 import com.hexaware.lms.filter.JwtAuthFilter;
 
 
@@ -46,10 +44,11 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.csrf().disable()
+        		.cors().and()
                 .authorizeHttpRequests()
-                .requestMatchers("/api/login/adminlogin","/api/login/userlogin","/api/library management system/member/add","/api/admin/addnewadmin","/v3/api-docs/**", "/swagger-ui/**","/swagger-resources/**").permitAll()
+                .requestMatchers("/api/login/adminlogin","/api/login/userlogin","/api/librarymanagementsystem/member/add","/api/admin/addnewadmin","/v3/api-docs/**","/api/librarymanagementsystem/member/getallmember", "/swagger-ui/**","/swagger-resources/**").permitAll()
                 .and()
-                .authorizeHttpRequests().requestMatchers("/api/librarymanagementsystem/reservation/**","/api/librarymanagementsystem/reports/**","/api/librarymanagementsystem/member/**","/api/librarymanagementsystem/borrowing/**","/api/librarymanagementsystem/book/**")
+                .authorizeHttpRequests().requestMatchers("/api/admin/**","/api/librarymanagementsystem/reservation/**","/api/librarymanagementsystem/reports/**","/api/librarymanagementsystem/member/**","/api/librarymanagementsystem/borrowing/**","/api/librarymanagementsystem/book/**","/api/librarymanagementsystem/loan_management/**")
                 .authenticated().and() //.formLogin().and().build();
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)

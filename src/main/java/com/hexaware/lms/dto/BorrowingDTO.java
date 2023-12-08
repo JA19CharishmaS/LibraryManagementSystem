@@ -7,26 +7,29 @@ import jakarta.validation.constraints.NotBlank;
 public class BorrowingDTO {
 	
 	private Long borrowingid;
-	@NotBlank(message ="Due date is required")
+	
 	private LocalDate duedate;
-	@NotBlank(message ="Return date is required")
+
 	private LocalDate returndate;
-	@NotBlank(message ="Status is required")
+	
 	private String status;
+	private long bookid;
+	private long memberid;
 	
 	public BorrowingDTO() {
 		super();
 	}
 
-	public BorrowingDTO(Long borrowingid, LocalDate duedate, LocalDate returndate, String status) {
+	public BorrowingDTO(Long borrowingid, LocalDate duedate, LocalDate returndate, String status, long bookid,
+			long memberid) {
 		super();
 		this.borrowingid = borrowingid;
 		this.duedate = duedate;
 		this.returndate = returndate;
 		this.status = status;
+		this.bookid = bookid;
+		this.memberid = memberid;
 	}
-
-
 
 	public Long getBorrowingid() {
 		return borrowingid;
@@ -59,6 +62,23 @@ public class BorrowingDTO {
 	public void setStatus(String status) {
 		this.status = status;
 	}
+
+	public long getBookid() {
+		return bookid;
+	}
+
+	public void setBookid(long bookid) {
+		this.bookid = bookid;
+	}
+
+	public long getMemberid() {
+		return memberid;
+	}
+
+	public void setMemberid(long memberid) {
+		this.memberid = memberid;
+	}
+
 	
 	
 

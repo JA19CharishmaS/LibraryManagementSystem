@@ -1,7 +1,7 @@
 package com.hexaware.lms.entities;
 
 /*
- * Author: Charishma & Sneha loved by Navneeth
+ * Author: Charishma & Sneha 
  * Date  : 10/11/2023
  */
 
@@ -36,8 +36,9 @@ public class Book {
 	private String publisher;
 	private LocalDate publicationdate;
 	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "book")
-	private List<Borrowing> borrowing = new ArrayList<>();
+	/*@OneToMany(cascade = CascadeType.ALL, mappedBy = "book")
+	 
+	private List<Borrowing> borrowing = new ArrayList<>();*/
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "book")
 	private List<Loanmanagement> loanmanagement = new ArrayList<>();
@@ -51,8 +52,8 @@ public class Book {
 	}
 
 	public Book(Long bookid, int quantity, int availablequantity, String booktitle, String bookauthor, String subject,
-			String isbn, String publisher, LocalDate publicationdate, List<Borrowing> borrowing,
-			List<Loanmanagement> loanmanagement, List<Reservation> reservation) {
+			String isbn, String publisher, LocalDate publicationdate
+			) {
 		super();
 		this.bookid = bookid;
 		this.quantity = quantity;
@@ -63,9 +64,8 @@ public class Book {
 		this.isbn = isbn;
 		this.publisher = publisher;
 		this.publicationdate = publicationdate;
-		this.borrowing = borrowing;
-		this.loanmanagement = loanmanagement;
-		this.reservation = reservation;
+		
+		
 	}
 
 	public Long getBookid() {
@@ -140,15 +140,9 @@ public class Book {
 		this.publicationdate = publicationdate;
 	}
 
-	public List<Borrowing> getBorrowing() {
-		return borrowing;
-	}
+	
 
-	public void setBorrowing(List<Borrowing> borrowing) {
-		this.borrowing = borrowing;
-	}
-
-	public List<Loanmanagement> getLoanmanagement() {
+	/*public List<Loanmanagement> getLoanmanagement() {
 		return loanmanagement;
 	}
 
@@ -162,17 +156,17 @@ public class Book {
 
 	public void setReservation(List<Reservation> reservation) {
 		this.reservation = reservation;
-	}
+	}*/
 
-	public void addBorrowing(Borrowing borrowing) {
+	/*public void addBorrowing(Borrowing borrowing) {
 
 		        borrowing.setBook(this);
 				List<Borrowing> list = getBorrowing();
 				list.add(borrowing);
 
-			}
+			}*/
 	
-	public void addLoanmanagement(Loanmanagement loanmanagement) {
+	/*public void addLoanmanagement(Loanmanagement loanmanagement) {
 
 		loanmanagement.setBook(this);
 		List<Loanmanagement> list = getLoanmanagement();
@@ -187,5 +181,5 @@ public class Book {
 		list.add(reservation);
 
 	}
-
+*/
 	}

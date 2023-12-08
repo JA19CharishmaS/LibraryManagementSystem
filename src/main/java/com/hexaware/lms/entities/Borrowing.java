@@ -17,19 +17,18 @@ import jakarta.validation.constraints.NotNull;
 public class Borrowing {
 
 	@Id
-    @SequenceGenerator(name="borrowing_seq",initialValue=1,allocationSize=1)
-	@GeneratedValue(strategy=GenerationType.SEQUENCE,generator="borrowing_seq")    
+      
 	private Long borrowingid;
 	private LocalDate duedate;
 	private LocalDate returndate;
 	private String status;
 	
-	@NotNull
+	
 	@ManyToOne
 	@JoinColumn(name = "bookid") // bookid is FK in Borrowing child table 
 	private Book book;
 	
-	@NotNull
+	
 	@ManyToOne
 	@JoinColumn(name = "memberid") // memberid is FK in Borrowing child table
 	private Member member;

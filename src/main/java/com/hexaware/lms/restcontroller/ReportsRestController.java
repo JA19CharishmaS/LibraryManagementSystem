@@ -22,7 +22,7 @@ import jakarta.validation.Valid;
 
 
 @RestController
-@RequestMapping("/api/library management system/reports")
+@RequestMapping("/api/librarymanagementsystem/reports")
 public class ReportsRestController {
 	
 	private IReportsService service;

@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,9 +20,9 @@ import com.hexaware.lms.exceptions.MemberNotFoundException;
 import com.hexaware.lms.service.IMemberService;
 
 import jakarta.validation.Valid;
-
+@CrossOrigin("http://localhost:4200")
 @RestController
-@RequestMapping("/api/library management system/member")
+@RequestMapping("/api/librarymanagementsystem/member")
 public class MemberRestController {
 	
 	
@@ -33,6 +34,7 @@ public class MemberRestController {
 	}
 
 	@PostMapping("/add")
+	
 	public Member addMember(@RequestBody MemberDTO memberDTO) {
 
 		return service.addMember(memberDTO);
@@ -62,9 +64,9 @@ public class MemberRestController {
 		
 	}
 	
-	@GetMapping("/getall")
-	@PreAuthorize("hasAnyAuthority('ROLE_ADMIN')")
-	public List<Member> getAllMember(){
+	@GetMapping("/getallmember")
+	//@PreAuthorize("hasAnyAuthority('ROLE_ADMIN')")
+	public List<MemberDTO> getAllMember(){
 		
 		return service.getAllMember();
 	}

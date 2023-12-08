@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,7 +21,7 @@ import com.hexaware.lms.exceptions.BorrowingNotFoundException;
 import com.hexaware.lms.service.IBorrowingService;
 
 import jakarta.validation.Valid;
-
+@CrossOrigin("http://localhost:4200")
 @RestController
 @RequestMapping("/api/librarymanagementsystem/borrowing")
 public class BorrowingRestController {
@@ -34,7 +35,7 @@ public class BorrowingRestController {
 	}
 
 	@PostMapping("/add")
-	@PreAuthorize("hasAnyAuthority('ROLE_ADMIN')")
+	@PreAuthorize("hasAnyAuthority('ROLE_USER')")
 	public Borrowing addBorrowing(@RequestBody BorrowingDTO borrowingDTO) {
 
 		return service.addBorrowing(borrowingDTO);

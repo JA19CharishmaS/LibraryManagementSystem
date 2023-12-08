@@ -7,5 +7,5 @@ import com.hexaware.lms.entities.Borrowing;
 
 @Repository
 public interface BorrowingRepository extends JpaRepository<Borrowing, Long>{
-
+	
 }

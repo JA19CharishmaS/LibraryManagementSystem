@@ -7,6 +7,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import com.hexaware.lms.entities.Admin;
 import com.hexaware.lms.entities.Member;
@@ -22,9 +23,10 @@ public class UserInfoUserDetailsService implements UserDetailsService {
 	@Autowired
 	private MemberRepository memberRepository;
 
+   
+    
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        
     	Optional<Admin> adminInfo = adminRepository.findByAdminUsername(username);
     	if(adminInfo.isPresent()) {
     		return adminInfo.map(AdminInfoUserDetails::new)
@@ -36,9 +38,8 @@ public class UserInfoUserDetailsService implements UserDetailsService {
     		return memberInfo.map(UserInfoUserDetails::new)
     	            .orElseThrow(() -> new UsernameNotFoundException("User not found: " + username));
     	}
-
     	throw new UsernameNotFoundException("User not found: " + username);
-    	
+  
     }
 }
 

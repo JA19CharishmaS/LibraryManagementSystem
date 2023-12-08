@@ -2,9 +2,12 @@ package com.hexaware.lms.restcontroller;
 
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,7 +23,7 @@ import com.hexaware.lms.exceptions.BookNotFoundException;
 import com.hexaware.lms.service.IBookService;
 
 import jakarta.validation.Valid;
-
+@CrossOrigin("http://localhost:4200")
 @RestController
 @RequestMapping("/api/librarymanagementsystem/book")
 public class BookRestController {
@@ -41,11 +44,11 @@ public class BookRestController {
 		return service.addBook(bookDTO);
 	}
 	
-	@PutMapping(value = "/update", consumes = "application/json", produces = "application/json")
+	@PutMapping(value ="/update/{bookid}", consumes = "application/json", produces = "application/json")
 	@PreAuthorize("hasAnyAuthority('ROLE_ADMIN')")
-	public Book updateBook(@RequestBody BookDTO bookDTO) {
+	public Book updateBook(@RequestBody BookDTO bookDTO,@PathVariable Long bookid) {
 
-		return service.updateBook(bookDTO);
+		return service.updateBook(bookDTO,bookid);
 
 	}
 	
@@ -59,47 +62,56 @@ public class BookRestController {
 	}
 	
 	@GetMapping("/getbybooktitle/{booktitle}")
-	@PreAuthorize("hasAnyAuthority('ROLE_USER')")
-	public BookDTO  getBookByTitle(@PathVariable @Valid String booktitle) throws BookNotFoundException{
+	@PreAuthorize("hasAnyAuthority('ROLE_ADMIN','ROLE_USER')")
+	public List <Book> getBookByTitle(@PathVariable @Valid String booktitle) throws BookNotFoundException{
 		
-		BookDTO bookDTO = service.getBookByTitle(booktitle);
+		List <Book>  books = service.getBookByTitle(booktitle);
 		
-		if(bookDTO.getBooktitle() == null) {
-			
-			throw new BookNotFoundException(HttpStatus.BAD_REQUEST,"Book Not Found for title : "+booktitle);
-		}
+		if (books.isEmpty()) {
+	        throw new BookNotFoundException(HttpStatus.BAD_REQUEST, "No books found for title: " + booktitle);
+	    }
 		
-		return bookDTO;
+		return books;
 		
 	}
 	
 	@GetMapping("/getbybookauthor/{bookauthor}")
+	
+	
+	
 	@PreAuthorize("hasAnyAuthority('ROLE_USER')")
-	public BookDTO  getBookByAuthor(@PathVariable @Valid String bookauthor) throws BookNotFoundException{
+	public Book  getBookByAuthor(@PathVariable @Valid String bookauthor) throws BookNotFoundException{
 		
-		BookDTO bookDTO = service.getBookByAuthor(bookauthor);
+		Book book = service.getBookByAuthor(bookauthor);
 
-        if(bookDTO.getBookauthor() == null) {
+        if(book.getBookauthor() == null) {
 			
 			throw new BookNotFoundException(HttpStatus.BAD_REQUEST,"Book Not Found for author : "+bookauthor);
 		}
 		
-		return bookDTO;
+		return book;
 		
 	}
 
 	@GetMapping("/getbysubject/{subject}")
 	@PreAuthorize("hasAnyAuthority('ROLE_USER')")
-	public BookDTO  getBookBySubject(@PathVariable  @Valid String subject) throws BookNotFoundException{
+	public Book  getBookBySubject(@PathVariable  @Valid String subject) throws BookNotFoundException{
 		
-		BookDTO bookDTO = service.getBookBySubject(subject);
+		Book book = service.getBookBySubject(subject);
 
-        if(bookDTO.getSubject() == null) {
+        if(book.getSubject() == null) {
 			
 			throw new BookNotFoundException(HttpStatus.BAD_REQUEST,"Book Not Found for sbject : "+subject);
 		}
 		
-		return bookDTO;
+		return book;
 		
+	}
+	@GetMapping("/findbooks")
+	@PreAuthorize("hasAnyAuthority('ROLE_USER','ROLE_ADMIN')")
+	public List<BookDTO> getAll() 
+	{
+		System.out.println("Find all the Books");
+		return service.getAll();
 	}
 }

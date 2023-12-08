@@ -22,7 +22,7 @@ import jakarta.validation.Valid;
 
 
 @RestController
-@RequestMapping("/api/library management system/reservation")
+@RequestMapping("/api/librarymanagementsystem/reservation")
 public class ReservationRestController {
 	
 	

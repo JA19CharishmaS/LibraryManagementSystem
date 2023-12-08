@@ -1,5 +1,6 @@
 package com.hexaware.lms.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -32,9 +33,9 @@ public class MemberServiceImp implements IMemberService {
 	public Member addMember(MemberDTO memberDTO) {
 		Member member = new Member();
 		member.setFirstname(memberDTO.getFirstname());
-		member.setUserName(memberDTO.getUsername());
+		member.setUserName(memberDTO.getUserName());
 		member.setLastname(memberDTO.getLastname());
-		member.setUserName(memberDTO.getUsername());
+		member.setUserName(memberDTO.getUserName());
 		member.setEmail(memberDTO.getEmail());
 		member.setPassword(passwordEncoder.encode(memberDTO.getPassword()));
 		member.setAccountstatus(memberDTO.getAccountstatus());
@@ -49,10 +50,10 @@ public class MemberServiceImp implements IMemberService {
 		
 		Member member = new Member();
 		member.setMemberid(memberDTO.getMemberid());
-		member.setUserName(memberDTO.getUsername());
+		member.setUserName(memberDTO.getUserName());
 		member.setFirstname(memberDTO.getFirstname());
 		member.setLastname(memberDTO.getLastname());
-		member.setUserName(memberDTO.getUsername());
+		member.setUserName(memberDTO.getUserName());
 		member.setEmail(memberDTO.getEmail());
 		member.setPassword(passwordEncoder.encode(memberDTO.getPassword()));
 		member.setAccountstatus(memberDTO.getAccountstatus());
@@ -84,11 +85,26 @@ public class MemberServiceImp implements IMemberService {
 	}
 
 	@Override
-	public List<Member> getAllMember() {
+	public List<MemberDTO> getAllMember() {
 		
 		logger.info("Fetch All Member From Table");
 		
-		return memberRepo.findAll(Sort.by("memberid"));
+		List <Member> memberList= memberRepo.findAll();
+		List <MemberDTO> memberDtoList=new ArrayList <>();
+		for (Member member : memberList) {
+			MemberDTO memberDTO=new MemberDTO();
+			memberDTO.setMemberid(member.getMemberid());
+			memberDTO.setUserName(member.getUserName());
+			memberDTO.setFirstname(member.getFirstname());
+			memberDTO.setLastname(member.getLastname());
+			memberDTO.setUserName(member.getUserName());
+			memberDTO.setEmail(member.getEmail());
+			memberDTO.setPassword(member.getPassword());
+			memberDTO.setAccountstatus(member.getAccountstatus());
+			 memberDtoList.add(memberDTO);
+			
+		}
+		return memberDtoList;
 	}
 
 	

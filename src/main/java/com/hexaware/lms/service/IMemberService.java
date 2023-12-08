@@ -10,6 +10,6 @@ public interface IMemberService {
 	public Member updateMember(MemberDTO memberDTO);
 	public void deleteMemberById(Long memberid);
 	public MemberDTO getMemberById(Long memberid);
-	public List<Member> getAllMember();
+	public List<MemberDTO> getAllMember();
 
 }
