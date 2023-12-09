@@ -2819,3 +2819,4 @@ java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1' for key '
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.4.jar:10.1.4]
 	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
 
+2023-12-09T23:07:50.152+05:30  INFO 648 --- [http-nio-8181-exec-6] c.h.lms.service.BorrowingServiceImp      :  Add Borrowing Data Into Table com.hexaware.lms.dto.BorrowingDTO@51e63465
