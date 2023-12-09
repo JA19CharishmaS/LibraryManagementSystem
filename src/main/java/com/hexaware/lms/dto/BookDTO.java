@@ -3,11 +3,12 @@ package com.hexaware.lms.dto;
 import java.time.LocalDate;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Past;
 
 public class BookDTO {
 	
 	private Long bookid;
-	private int quantity;
+	
 	private int availablequantity;
 	@NotBlank(message = "Book title is required")
 	private String booktitle;
@@ -19,25 +20,12 @@ public class BookDTO {
 	private String isbn;
 	@NotBlank(message = "Publisher name is required")
 	private String publisher;
+	@Past
 	@NotBlank(message = "Publication date is required")
 	private LocalDate publicationdate;
 	
 	public BookDTO() {
 		super();
-	}
-
-	public BookDTO(Long bookid, int quantity, int availablequantity, String booktitle, String bookauthor, String subject,
-			String isbn, String publisher, LocalDate publicationdate) {
-		super();
-		this.bookid = bookid;
-		this.quantity = quantity;
-		this.availablequantity = availablequantity;
-		this.booktitle = booktitle;
-		this.bookauthor = bookauthor;
-		this.subject = subject;
-		this.isbn = isbn;
-		this.publisher = publisher;
-		this.publicationdate = publicationdate;
 	}
 
 	public Long getBookid() {
@@ -46,14 +34,6 @@ public class BookDTO {
 
 	public void setBookid(Long bookid) {
 		this.bookid = bookid;
-	}
-
-	public int getQuantity() {
-		return quantity;
-	}
-
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
 	}
 
 	public int getAvailablequantity() {
@@ -109,6 +89,23 @@ public class BookDTO {
 	}
 
 	public void setPublicationdate(LocalDate publicationdate) {
+		this.publicationdate = publicationdate;
+	}
+
+	public BookDTO(Long bookid, int availablequantity,  String booktitle,
+			String bookauthor,
+		    String subject,
+			 String isbn,
+		 String publisher,
+			 LocalDate publicationdate) {
+		super();
+		this.bookid = bookid;
+		this.availablequantity = availablequantity;
+		this.booktitle = booktitle;
+		this.bookauthor = bookauthor;
+		this.subject = subject;
+		this.isbn = isbn;
+		this.publisher = publisher;
 		this.publicationdate = publicationdate;
 	}
 

@@ -34,7 +34,6 @@ public class BookServiceImp implements IBookService {
 		
 		Book book = new Book();
 		book.setBookid(bookDTO.getBookid());
-		book.setQuantity(bookDTO.getQuantity());
 		book.setAvailablequantity(bookDTO.getAvailablequantity());
 		book.setBooktitle(bookDTO.getBooktitle());
 		book.setBookauthor(bookDTO.getBookauthor());
@@ -42,6 +41,9 @@ public class BookServiceImp implements IBookService {
 		book.setIsbn(bookDTO.getIsbn());
 		book.setPublisher(bookDTO.getPublisher());
 		book.setPublicationdate(bookDTO.getPublicationdate());
+		if (book.getAvailablequantity() < 1) {
+	        throw new RuntimeException("The book \"" + book.getBooktitle() + "\" is out of stock!");
+	    }
 		logger.info(" Inserted Book Data Into Table " + bookDTO);
 		return bookRepo.save(book);
 	}
@@ -52,7 +54,7 @@ public class BookServiceImp implements IBookService {
         if (optionalBook.isPresent()) {
              bookToUpdate = optionalBook.get();
              bookToUpdate.setBookid(bookDTO.getBookid());
-             bookToUpdate.setQuantity(bookDTO.getQuantity());
+        
              bookToUpdate.setAvailablequantity(bookDTO.getAvailablequantity());
              bookToUpdate.setBooktitle(bookDTO.getBooktitle());
              bookToUpdate.setBookauthor(bookDTO.getBookauthor());
@@ -106,7 +108,7 @@ public class BookServiceImp implements IBookService {
 		for (Book book : bookList) {
 			BookDTO bookDTO=new BookDTO();
 			bookDTO.setBookid(book.getBookid());
-			bookDTO.setQuantity(book.getQuantity());
+			
 			bookDTO.setAvailablequantity(book.getAvailablequantity());
 			bookDTO.setBooktitle(book.getBooktitle());
 			bookDTO.setBookauthor(book.getBookauthor());

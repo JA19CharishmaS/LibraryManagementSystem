@@ -27,8 +27,7 @@ public class Book {
     @SequenceGenerator(name="book_seq",initialValue=1001,allocationSize=1)
 	@GeneratedValue(strategy=GenerationType.SEQUENCE,generator="book_seq") 
 	private Long bookid;
-	private int quantity;
-	private int availablequantity;
+    private int availablequantity;
 	private String booktitle;
 	private String bookauthor;
 	private String subject;
@@ -51,12 +50,12 @@ public class Book {
 		super();
 	}
 
-	public Book(Long bookid, int quantity, int availablequantity, String booktitle, String bookauthor, String subject,
+	public Book(Long bookid, int availablequantity, String booktitle, String bookauthor, String subject,
 			String isbn, String publisher, LocalDate publicationdate
 			) {
 		super();
 		this.bookid = bookid;
-		this.quantity = quantity;
+		
 		this.availablequantity = availablequantity;
 		this.booktitle = booktitle;
 		this.bookauthor = bookauthor;
@@ -76,13 +75,7 @@ public class Book {
 		this.bookid = bookid;
 	}
 
-	public int getQuantity() {
-		return quantity;
-	}
-
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
-	}
+	
 
 	public int getAvailablequantity() {
 		return availablequantity;
@@ -139,7 +132,13 @@ public class Book {
 	public void setPublicationdate(LocalDate publicationdate) {
 		this.publicationdate = publicationdate;
 	}
+	 public void borrowBook() {
+	        this.availablequantity--;
+	    }
 
+	    public void returnBook() {
+	        this.availablequantity++;
+	    }
 	
 
 	/*public List<Loanmanagement> getLoanmanagement() {

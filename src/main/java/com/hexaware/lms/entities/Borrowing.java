@@ -18,10 +18,11 @@ public class Borrowing {
 
 	@Id
       
+	@GeneratedValue(strategy=GenerationType.AUTO) 
 	private Long borrowingid;
 	private LocalDate duedate;
 	private LocalDate returndate;
-	private String status;
+	 private Integer quantityBorrow;
 	
 	
 	@ManyToOne
@@ -35,17 +36,6 @@ public class Borrowing {
 
 	public Borrowing() {
 		super();
-	}
-
-	public Borrowing(Long borrowingid, LocalDate duedate, LocalDate returndate, String status, Book book,
-			Member member) {
-		super();
-		this.borrowingid = borrowingid;
-		this.duedate = duedate;
-		this.returndate = returndate;
-		this.status = status;
-		this.book = book;
-		this.member = member;
 	}
 
 	public Long getBorrowingid() {
@@ -72,12 +62,12 @@ public class Borrowing {
 		this.returndate = returndate;
 	}
 
-	public String getStatus() {
-		return status;
+	public Integer getQuantityBorrow() {
+		return quantityBorrow;
 	}
 
-	public void setStatus(String status) {
-		this.status = status;
+	public void setQuantityBorrow(Integer quantityBorrow) {
+		this.quantityBorrow = quantityBorrow;
 	}
 
 	public Book getBook() {
@@ -95,6 +85,18 @@ public class Borrowing {
 	public void setMember(Member member) {
 		this.member = member;
 	}
+
+	public Borrowing(Long borrowingid, LocalDate duedate, LocalDate returndate, Integer quantityBorrow, Book book,
+			Member member) {
+		super();
+		this.borrowingid = borrowingid;
+		this.duedate = duedate;
+		this.returndate = returndate;
+		this.quantityBorrow = quantityBorrow;
+		this.book = book;
+		this.member = member;
+	}
+
 	
 	
 	

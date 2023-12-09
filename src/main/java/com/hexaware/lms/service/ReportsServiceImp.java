@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.hexaware.lms.dto.ReportsDTO;
 import com.hexaware.lms.entities.Reports;
+import com.hexaware.lms.repository.BookRepository;
 import com.hexaware.lms.repository.ReportsRepository;
 
 @Service
@@ -18,6 +19,7 @@ public class ReportsServiceImp implements IReportsService {
 	Logger logger = LoggerFactory.getLogger(ReportsServiceImp.class);
 	
 	private ReportsRepository reportsRepo;
+	private BookRepository bookRepo;
 	@Autowired
 	public ReportsServiceImp(ReportsRepository reportsRepo) {
 		super();

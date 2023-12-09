@@ -3,32 +3,21 @@ package com.hexaware.lms.dto;
 import java.time.LocalDate;
 
 import jakarta.validation.constraints.NotBlank;
-
+import jakarta.validation.constraints.Future;
 public class BorrowingDTO {
 	
 	private Long borrowingid;
-	
+	 @Future
 	private LocalDate duedate;
 
 	private LocalDate returndate;
 	
-	private String status;
+	private Integer quantityBorrow;
 	private long bookid;
 	private long memberid;
 	
 	public BorrowingDTO() {
 		super();
-	}
-
-	public BorrowingDTO(Long borrowingid, LocalDate duedate, LocalDate returndate, String status, long bookid,
-			long memberid) {
-		super();
-		this.borrowingid = borrowingid;
-		this.duedate = duedate;
-		this.returndate = returndate;
-		this.status = status;
-		this.bookid = bookid;
-		this.memberid = memberid;
 	}
 
 	public Long getBorrowingid() {
@@ -55,12 +44,12 @@ public class BorrowingDTO {
 		this.returndate = returndate;
 	}
 
-	public String getStatus() {
-		return status;
+	public Integer getQuantityBorrow() {
+		return quantityBorrow;
 	}
 
-	public void setStatus(String status) {
-		this.status = status;
+	public void setQuantityBorrow(Integer quantityBorrow) {
+		this.quantityBorrow = quantityBorrow;
 	}
 
 	public long getBookid() {
@@ -78,6 +67,19 @@ public class BorrowingDTO {
 	public void setMemberid(long memberid) {
 		this.memberid = memberid;
 	}
+
+	public BorrowingDTO(Long borrowingid, LocalDate duedate, LocalDate returndate, Integer quantityBorrow, long bookid,
+			long memberid) {
+		super();
+		this.borrowingid = borrowingid;
+		this.duedate = duedate;
+		this.returndate = returndate;
+		this.quantityBorrow = quantityBorrow;
+		this.bookid = bookid;
+		this.memberid = memberid;
+	}
+
+	
 
 	
 	
