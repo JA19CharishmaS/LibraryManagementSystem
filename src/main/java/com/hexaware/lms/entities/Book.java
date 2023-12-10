@@ -39,8 +39,8 @@ public class Book {
 	 
 	private List<Borrowing> borrowing = new ArrayList<>();*/
 	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "book")
-	private List<Loanmanagement> loanmanagement = new ArrayList<>();
+	/*@OneToMany(cascade = CascadeType.ALL, mappedBy = "book")
+	private List<Loanmanagement> loanmanagement = new ArrayList<>();*/
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "book")
 	private List<Reservation> reservation = new ArrayList<>();

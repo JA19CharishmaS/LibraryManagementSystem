@@ -2,6 +2,7 @@ package com.hexaware.lms.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,6 +12,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.hexaware.lms.dto.MemberDTO;
+import com.hexaware.lms.entities.Book;
 import com.hexaware.lms.entities.Member;
 import com.hexaware.lms.repository.MemberRepository;
 
@@ -45,24 +47,8 @@ public class MemberServiceImp implements IMemberService {
 		return memberRepo.save(member);
 	}
 	
-	@Override
-	public Member updateMember(MemberDTO memberDTO) {
 		
-		Member member = new Member();
-		member.setMemberid(memberDTO.getMemberid());
-		member.setUserName(memberDTO.getUserName());
-		member.setFirstname(memberDTO.getFirstname());
-		member.setLastname(memberDTO.getLastname());
-		member.setUserName(memberDTO.getUserName());
-		member.setEmail(memberDTO.getEmail());
-		member.setPassword(passwordEncoder.encode(memberDTO.getPassword()));
-		member.setAccountstatus(memberDTO.getAccountstatus());
-		
-		logger.info("Added Member Data Into Table" + memberDTO);
-		
-		return memberRepo.save(member);
-			
-	}
+	
 
 
 	@Override
@@ -107,5 +93,29 @@ public class MemberServiceImp implements IMemberService {
 		return memberDtoList;
 	}
 
-	
+	@Override
+	public Member updateMember(MemberDTO memberDTO, Long memberid) {
+		Optional<Member> optionalMember = memberRepo.findById(memberid);
+        Member memberToUpdate = new Member();
+        if (optionalMember.isPresent()) {
+             memberToUpdate = optionalMember.get();
+             memberToUpdate  .setUserName(memberDTO.getUserName());
+             memberToUpdate .setFirstname(memberDTO.getFirstname());
+             memberToUpdate .setLastname(memberDTO.getLastname());
+          
+             memberToUpdate .setEmail(memberDTO.getEmail());
+             memberToUpdate .setPassword(memberDTO.getPassword());
+             memberToUpdate .setAccountstatus(memberDTO.getAccountstatus());
+        }
+        return memberRepo.save(memberToUpdate);
+	}
 }
+
+	
+        
+           
+            
+          
+
+	
+

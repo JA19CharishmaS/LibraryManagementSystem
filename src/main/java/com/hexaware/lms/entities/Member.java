@@ -31,8 +31,8 @@ public class Member {
 	/*@OneToMany(cascade = CascadeType.ALL, mappedBy = "member")
 	private List<Borrowing> borrowing = new ArrayList<>();*/
 	
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "member")
-	private List<Loanmanagement> loanmanagement = new ArrayList<>();
+	/*@OneToMany(cascade = CascadeType.ALL, mappedBy = "member")
+	private List<Loanmanagement> loanmanagement = new ArrayList<>();*/
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "member")
 	private List<Reservation> reservation = new ArrayList<>();
@@ -43,7 +43,7 @@ public class Member {
 	}
 	
 	public Member(Long memberid, String firstname, String lastname,String userName, String email, String password, String accountstatus,
-			 List<Loanmanagement> loanmanagement, List<Reservation> reservation) {
+			  List<Reservation> reservation) {
 		super();
 		this.memberid = memberid;
 		this.firstname = firstname;
@@ -53,7 +53,7 @@ public class Member {
 		this.password = password;
 		this.accountstatus = accountstatus;
 		
-		this.loanmanagement = loanmanagement;
+		
 		this.reservation = reservation;
 	}
 
@@ -114,14 +114,7 @@ public class Member {
 	
 
 	
-	public List<Loanmanagement> getLoanmanagement() {
-		return loanmanagement;
-	}
-
-	public void setLoanmanagement(List<Loanmanagement> loanmanagement) {
-		this.loanmanagement = loanmanagement;
-	}
-
+	
 	public List<Reservation> getReservation() {
 		return reservation;
 	}
